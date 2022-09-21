@@ -1,6 +1,5 @@
 package com.example.ej6.personcontrollers;
 
-import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
@@ -30,14 +29,15 @@ public class Controlador1 {
     }
 
     //Parte2
-    /*
-        {
-            "nombre":"Barcelona",
-            "numeroHabitantes":850000
-        }
-     */
     @PostMapping(value= "/addCiudad")
     public void useradd(@RequestBody Ciudad ciudad) {
         listaCiudades.add(ciudad);
     }
 }
+
+/*
+        {
+            "nombre":"Barcelona",
+            "numeroHabitantes":850000
+        }
+*/

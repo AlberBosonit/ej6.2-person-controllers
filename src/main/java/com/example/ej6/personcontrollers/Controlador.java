@@ -2,12 +2,9 @@ package com.example.ej6.personcontrollers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
-import java.util.ArrayList;
-
+//Parte3
 @RestController
 public class Controlador {
 
@@ -23,7 +20,6 @@ public class Controlador {
     @Qualifier("bean3")
     Person bean3;
 
-    //Parte3
     @GetMapping(value= "controlador/bean/{bean}")
     public Person giveBean(@PathVariable String bean) {
         return switch (bean) {

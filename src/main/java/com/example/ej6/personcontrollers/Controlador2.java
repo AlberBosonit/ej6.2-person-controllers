@@ -19,8 +19,7 @@ public class Controlador2 {
     //Parte1
     @GetMapping(value= "/getPersona")
     public Person getPersona() {
-        Integer edadPorDos = person.getEdad() * 2;
-        person.setEdad(edadPorDos);
+        person.setEdadPorDos(person.getEdad());
         return person;
     }
 

@@ -1,14 +1,7 @@
 package com.example.ej6.personcontrollers;
 
-import com.google.gson.Gson;
-import org.springframework.stereotype.Component;
+public class Person {
 
-import java.io.Serializable;
-
-@Component
-public class Person implements Serializable {
-
-    private static final long serialVersionUID = -113836152829431784L;
     private String nombre;
     private String poblacion;
     private Integer edad;
@@ -31,6 +24,10 @@ public class Person implements Serializable {
 
     public void setEdad(Integer edad) {
         this.edad = edad;
+    }
+
+    public void setEdadPorDos(Integer edad) {
+        this.edad = edad * 2;
     }
 
     public String getNombre() {
